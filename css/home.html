@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DialogueGenie - Home</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="screen">
+      <!-- iOS Status Bar -->
+      <div class="status-bar">
+        <span class="status-bar-time">9:41</span>
+        <div class="status-bar-icons">
+          <i class="fas fa-signal"></i>
+          <i class="fas fa-wifi"></i>
+          <i class="fas fa-battery-full"></i>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div style="padding: var(--spacing-md); padding-bottom: 100px;">
+        <div class="home-header">
+          <div>
+            <h1>Hello, Sarah!</h1>
+            <p style="margin-top: -10px; color: var(--text-secondary);">Ready to practice English today?</p>
+          </div>
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User Profile" class="avatar">
+        </div>
+
+        <!-- Streak Section -->
+        <div class="card">
+          <div class="flex justify-between items-center mb-sm">
+            <h3 style="margin-bottom: 0;">Your Streak</h3>
+            <span class="badge badge-primary">7 days</span>
+          </div>
+          <div class="flex justify-between mb-sm">
+            <div style="text-align: center; flex: 1;">
+              <div style="width: 30px; height: 30px; background-color: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; margin: 0 auto;"><i class="fas fa-check"></i></div>
+              <div style="font-size: 12px; margin-top: 4px;">Mon</div>
+            </div>
+            <div style="text-align: center; flex: 1;">
+              <div style="width: 30px; height: 30px; background-color: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; margin: 0 auto;"><i class="fas fa-check"></i></div>
+              <div style="font-size: 12px; margin-top: 4px;">Tue</div>
+            </div>
+            <div style="text-align: center; flex: 1;">
+              <div style="width: 30px; height: 30px; background-color: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; margin: 0 auto;"><i class="fas fa-check"></i></div>
+              <div style="font-size: 12px; margin-top: 4px;">Wed</div>
+            </div>
+            <div style="text-align: center; flex: 1;">
+              <div style="width: 30px; height: 30px; background-color: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; margin: 0 auto;"><i class="fas fa-check"></i></div>
+              <div style="font-size: 12px; margin-top: 4px;">Thu</div>
+            </div>
+            <div style="text-align: center; flex: 1;">
+              <div style="width: 30px; height: 30px; background-color: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; margin: 0 auto;"><i class="fas fa-check"></i></div>
+              <div style="font-size: 12px; margin-top: 4px;">Fri</div>
+            </div>
+            <div style="text-align: center; flex: 1;">
+              <div style="width: 30px; height: 30px; background-color: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; margin: 0 auto;"><i class="fas fa-check"></i></div>
+              <div style="font-size: 12px; margin-top: 4px;">Sat</div>
+            </div>
+            <div style="text-align: center; flex: 1;">
+              <div style="width: 30px; height: 30px; background-color: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; margin: 0 auto;"><i class="fas fa-star"></i></div>
+              <div style="font-size: 12px; margin-top: 4px;">Sun</div>
+            </div>
+          </div>
+          <button class="button button-primary" style="width: 100%;">Continue Learning</button>
+        </div>
+
+        <!-- Today's Goal Section -->
+        <h3>Today's Goal</h3>
+        <div class="card">
+          <div class="flex items-center mb-md">
+            <div style="width: 40px; height: 40px; background-color: rgba(74, 111, 234, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+              <i class="fas fa-microphone" style="color: var(--primary-color);"></i>
+            </div>
+            <div style="flex: 1;">
+              <h4 style="margin-bottom: 4px;">Complete Daily Conversation</h4>
+              <div class="flex justify-between items-center">
+                <div style="font-size: 13px; color: var(--text-secondary);">Topic: Business Meeting</div>
+                <div style="font-size: 13px; color: var(--primary-color); font-weight: 600;">15 mins</div>
+              </div>
+            </div>
+          </div>
+          <div style="width: 100%; height: 6px; background-color: #eee; border-radius: 3px;">
+            <div style="width: 65%; height: 100%; background-color: var(--primary-color); border-radius: 3px;"></div>
+          </div>
+          <div class="flex justify-between" style="font-size: 12px; margin-top: 6px;">
+            <span>Progress: 65%</span>
+            <span>5/8 exercises</span>
+          </div>
+        </div>
+
+        <!-- Character Selection Section (NEW) -->
+        <div class="flex justify-between items-center mb-md">
+          <h3 style="margin-bottom: 0;">Dialogue Partners</h3>
+          <a href="#" style="font-size: 14px;">View All</a>
+        </div>
+        
+        <div style="overflow-x: auto;">
+          <div style="display: flex; gap: 15px; padding-bottom: 10px; min-width: min-content;">
+            <!-- Character cards -->
+            <div style="width: 100px; text-align: center;">
+              <div style="width: 80px; height: 80px; border-radius: 50%; overflow: hidden; margin: 0 auto 8px; border: 2px solid var(--primary-color);">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Business Coach" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div style="font-size: 13px; font-weight: 600;">Business Coach</div>
+              <div style="font-size: 11px; color: var(--text-secondary);">Professional</div>
+            </div>
+            
+            <div style="width: 100px; text-align: center;">
+              <div style="width: 80px; height: 80px; border-radius: 50%; overflow: hidden; margin: 0 auto 8px;">
+                <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Travel Guide" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div style="font-size: 13px; font-weight: 600;">Travel Guide</div>
+              <div style="font-size: 11px; color: var(--text-secondary);">Friendly</div>
+            </div>
+            
+            <div style="width: 100px; text-align: center;">
+              <div style="width: 80px; height: 80px; border-radius: 50%; overflow: hidden; margin: 0 auto 8px;">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Interview Panel" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div style="font-size: 13px; font-weight: 600;">Interviewer</div>
+              <div style="font-size: 11px; color: var(--text-secondary);">Professional</div>
+            </div>
+            
+            <!-- Enhanced Custom Character Card -->
+            <div id="create-character-card" style="width: 100px; text-align: center; cursor: pointer;">
+              <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, rgba(74, 111, 234, 0.1), rgba(130, 160, 250, 0.3)); display: flex; align-items: center; justify-content: center; margin: 0 auto 8px;">
+                <i class="fas fa-plus" style="font-size: 24px; color: var(--primary-color);"></i>
+              </div>
+              <div style="font-size: 13px; font-weight: 600;">Personalize</div>
+              <div style="font-size: 11px; color: var(--text-secondary);">Create Your Own</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recommended Lessons -->
+        <div class="flex justify-between items-center mb-md">
+          <h3 style="margin-bottom: 0;">Recommended Lessons</h3>
+          <a href="#" style="font-size: 14px;">See All</a>
+        </div>
+        
+        <div class="lessons-grid">
+          <div class="card" style="margin-bottom: var(--spacing-sm);">
+            <div style="position: relative; height: 100px; background-color: #f0f4ff; border-radius: 8px; overflow: hidden; margin: -16px -16px 12px -16px;">
+              <img src="https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Job Interview" style="width: 100%; height: 100%; object-fit: cover;">
+              <div style="position: absolute; bottom: 8px; left: 8px; background-color: rgba(0,0,0,0.6); color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;">
+                <i class="fas fa-star" style="color: #FFD700;"></i> 4.9
+              </div>
+            </div>
+            <h4 style="margin-bottom: 4px;">Job Interview</h4>
+            <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 8px;">Practice common interview questions and responses</p>
+            <div class="flex justify-between items-center">
+              <span class="badge" style="background-color: #e7f0ff; color: var(--primary-color);">Intermediate</span>
+              <span style="font-size: 13px; color: var(--text-secondary);">20 min</span>
+            </div>
+          </div>
+          
+          <div class="card" style="margin-bottom: var(--spacing-sm);">
+            <div style="position: relative; height: 100px; background-color: #f0f4ff; border-radius: 8px; overflow: hidden; margin: -16px -16px 12px -16px;">
+              <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Travel Conversation" style="width: 100%; height: 100%; object-fit: cover;">
+              <div style="position: absolute; bottom: 8px; left: 8px; background-color: rgba(0,0,0,0.6); color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;">
+                <i class="fas fa-star" style="color: #FFD700;"></i> 4.7
+              </div>
+            </div>
+            <h4 style="margin-bottom: 4px;">Travel Talk</h4>
+            <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 8px;">Learn useful phrases for your next trip abroad</p>
+            <div class="flex justify-between items-center">
+              <span class="badge" style="background-color: #e7f0ff; color: var(--primary-color);">Beginner</span>
+              <span style="font-size: 13px; color: var(--text-secondary);">15 min</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Suggested Topics -->
+        <h3>Suggested Topics</h3>
+        <div class="flex" style="gap: 10px; overflow-x: auto; padding-bottom: 10px; margin-bottom: 20px;">
+          <div style="flex: 0 0 auto; padding: 12px 20px; background-color: #f0f4ff; border-radius: 20px; color: var(--primary-color);">
+            <i class="fas fa-briefcase"></i> Business
+          </div>
+          <div style="flex: 0 0 auto; padding: 12px 20px; background-color: #fff0f0; border-radius: 20px; color: var(--accent-color);">
+            <i class="fas fa-plane"></i> Travel
+          </div>
+          <div style="flex: 0 0 auto; padding: 12px 20px; background-color: #f0fff0; border-radius: 20px; color: #28a745;">
+            <i class="fas fa-utensils"></i> Food
+          </div>
+          <div style="flex: 0 0 auto; padding: 12px 20px; background-color: #f0f8ff; border-radius: 20px; color: #17a2b8;">
+            <i class="fas fa-film"></i> Movies
+          </div>
+        </div>
+      </div>
+
+      <!-- iOS Tab Bar -->
+      <div class="tab-bar">
+        <div class="tab-item active">
+          <i class="tab-icon fas fa-home"></i>
+          <span class="tab-label">Home</span>
+        </div>
+        <div class="tab-item">
+          <i class="tab-icon fas fa-comment-alt"></i>
+          <span class="tab-label">Chat</span>
+        </div>
+        <div class="tab-item">
+          <i class="tab-icon fas fa-graduation-cap"></i>
+          <span class="tab-label">Practice</span>
+        </div>
+        <div class="tab-item">
+          <i class="tab-icon fas fa-chart-line"></i>
+          <span class="tab-label">Progress</span>
+        </div>
+        <div class="tab-item">
+          <i class="tab-icon fas fa-user"></i>
+          <span class="tab-label">Profile</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DialogueGenie - Profile</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="screen">
+      <!-- iOS Status Bar -->
+      <div class="status-bar">
+        <span class="status-bar-time">9:41</span>
+        <div class="status-bar-icons">
+          <i class="fas fa-signal"></i>
+          <i class="fas fa-wifi"></i>
+          <i class="fas fa-battery-full"></i>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div style="padding: var(--spacing-md); padding-bottom: 100px;">
+        <div class="profile-header">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User Profile" class="profile-avatar">
+          <h2 style="margin-bottom: 4px;">Sarah Johnson</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 8px;">English Learner • Intermediate Level</p>
+          <div style="display: flex; gap: 10px;">
+            <div style="background-color: var(--primary-color); color: white; border-radius: 20px; padding: 4px 12px; font-size: 12px; display: flex; align-items: center;">
+              <i class="fas fa-fire" style="margin-right: 4px;"></i> 7-Day Streak
+            </div>
+            <div style="background-color: var(--accent-color); color: white; border-radius: 20px; padding: 4px 12px; font-size: 12px; display: flex; align-items: center;">
+              <i class="fas fa-star" style="margin-right: 4px;"></i> Pro Member
+            </div>
+          </div>
+        </div>
+
+        <!-- Learning Stats -->
+        <div class="card mb-lg">
+          <h3>Learning Stats</h3>
+          <div class="flex justify-between mb-md" style="text-align: center;">
+            <div>
+              <div style="font-size: 24px; font-weight: 600; color: var(--primary-color);">32</div>
+              <div style="font-size: 14px; color: var(--text-secondary);">Conversations</div>
+            </div>
+            <div>
+              <div style="font-size: 24px; font-weight: 600; color: var(--primary-color);">12</div>
+              <div style="font-size: 14px; color: var(--text-secondary);">Hours</div>
+            </div>
+            <div>
+              <div style="font-size: 24px; font-weight: 600; color: var(--primary-color);">845</div>
+              <div style="font-size: 14px; color: var(--text-secondary);">Words Learned</div>
+            </div>
+          </div>
+          <a href="progress.html" class="button button-secondary" style="width: 100%; text-align: center;">View Detailed Progress</a>
+        </div>
+
+        <!-- Learning Preferences -->
+        <div class="card mb-lg">
+          <h3>Learning Preferences</h3>
+          
+          <div class="flex justify-between items-center mb-md">
+            <div>
+              <h4 style="margin-bottom: 4px;">Learning Goal</h4>
+              <div style="font-size: 14px; color: var(--text-secondary);">What are you learning English for?</div>
+            </div>
+            <div style="display: flex; align-items: center; color: var(--primary-color);">
+              <span style="margin-right: 8px;">Work</span>
+              <i class="fas fa-chevron-right" style="font-size: 14px;"></i>
+            </div>
+          </div>
+
+          <div class="flex justify-between items-center mb-md">
+            <div>
+              <h4 style="margin-bottom: 4px;">Current Level</h4>
+              <div style="font-size: 14px; color: var(--text-secondary);">Based on your assessment</div>
+            </div>
+            <div style="display: flex; align-items: center; color: var(--primary-color);">
+              <span style="margin-right: 8px;">Intermediate (B1)</span>
+              <i class="fas fa-chevron-right" style="font-size: 14px;"></i>
+            </div>
+          </div>
+
+          <div class="flex justify-between items-center mb-md">
+            <div>
+              <h4 style="margin-bottom: 4px;">Daily Goal</h4>
+              <div style="font-size: 14px; color: var(--text-secondary);">Minutes per day</div>
+            </div>
+            <div style="display: flex; align-items: center; color: var(--primary-color);">
+              <span style="margin-right: 8px;">20 minutes</span>
+              <i class="fas fa-chevron-right" style="font-size: 14px;"></i>
+            </div>
+          </div>
+
+          <div class="flex justify-between items-center">
+            <div>
+              <h4 style="margin-bottom: 4px;">Interests</h4>
+              <div style="font-size: 14px; color: var(--text-secondary);">Topics you want to focus on</div>
+            </div>
+            <div style="display: flex; align-items: center; color: var(--primary-color);">
+              <span style="margin-right: 8px;">Business, Travel</span>
+              <i class="fas fa-chevron-right" style="font-size: 14px;"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificates & Achievements -->
+        <div class="card mb-lg">
+          <div class="flex justify-between items-center mb-md">
+            <h3 style="margin-bottom: 0;">Certificates</h3>
+            <a href="#" style="font-size: 14px;">See All</a>
+          </div>
+
+          <div style="display: flex; gap: 15px; overflow-x: auto; padding-bottom: 10px;">
+            <div style="min-width: 200px; border: 1px solid #eee; border-radius: 12px; overflow: hidden;">
+              <div style="height: 100px; background-color: #f0f4ff; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-certificate" style="font-size: 40px; color: var(--primary-color);"></i>
+              </div>
+              <div style="padding: 12px;">
+                <h4 style="font-size: 14px; margin-bottom: 4px;">Business English</h4>
+                <div style="font-size: 12px; color: var(--text-secondary);">Completed on May 15, 2023</div>
+              </div>
+            </div>
+
+            <div style="min-width: 200px; border: 1px solid #eee; border-radius: 12px; overflow: hidden;">
+              <div style="height: 100px; background-color: #fff0f0; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-certificate" style="font-size: 40px; color: var(--accent-color);"></i>
+              </div>
+              <div style="padding: 12px;">
+                <h4 style="font-size: 14px; margin-bottom: 4px;">Interview Skills</h4>
+                <div style="font-size: 12px; color: var(--text-secondary);">Completed on June 2, 2023</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Account Settings -->
+        <div class="card">
+          <h3>Account</h3>
+          
+          <a href="#" class="flex justify-between items-center" style="text-decoration: none; color: var(--text-primary); padding: 12px 0; border-bottom: 1px solid #eee;">
+            <div class="flex items-center">
+              <div style="width: 36px; height: 36px; background-color: #f0f4ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                <i class="fas fa-user-edit" style="color: var(--primary-color);"></i>
+              </div>
+              <span>Edit Profile</span>
+            </div>
+            <i class="fas fa-chevron-right" style="font-size: 14px; color: var(--text-secondary);"></i>
+          </a>
+
+          <a href="#" class="flex justify-between items-center" style="text-decoration: none; color: var(--text-primary); padding: 12px 0; border-bottom: 1px solid #eee;">
+            <div class="flex items-center">
+              <div style="width: 36px; height: 36px; background-color: #f0f4ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                <i class="fas fa-credit-card" style="color: var(--primary-color);"></i>
+              </div>
+              <span>Subscription</span>
+            </div>
+            <i class="fas fa-chevron-right" style="font-size: 14px; color: var(--text-secondary);"></i>
+          </a>
+
+          <a href="settings.html" class="flex justify-between items-center" style="text-decoration: none; color: var(--text-primary); padding: 12px 0;">
+            <div class="flex items-center">
+              <div style="width: 36px; height: 36px; background-color: #f0f4ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                <i class="fas fa-cog" style="color: var(--primary-color);"></i>
+              </div>
+              <span>Settings</span>
+            </div>
+            <i class="fas fa-chevron-right" style="font-size: 14px; color: var(--text-secondary);"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- iOS Tab Bar -->
+      <div class="tab-bar">
+        <div class="tab-item">
+          <i class="tab-icon fas fa-home"></i>
+          <span class="tab-label">Home</span>
+        </div>
+        <div class="tab-item">
+          <i class="tab-icon fas fa-comment-alt"></i>
+          <span class="tab-label">Chat</span>
+        </div>
+        <div class="tab-item">
+          <i class="tab-icon fas fa-graduation-cap"></i>
+          <span class="tab-label">Practice</span>
+        </div>
+        <div class="tab-item">
+          <i class="tab-icon fas fa-chart-line"></i>
+          <span class="tab-label">Progress</span>
+        </div>
+        <div class="tab-item active">
+          <i class="tab-icon fas fa-user"></i>
+          <span class="tab-label">Profile</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html> 

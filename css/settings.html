@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DialogueGenie - Settings</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Toggle Switch Styles */
+    .toggle-switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+    
+    .toggle-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    
+    .toggle-slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 34px;
+    }
+    
+    .toggle-slider:before {
+      position: absolute;
+      content: "";
+      height: 20px;
+      width: 20px;
+      left: 2px;
+      bottom: 2px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+    
+    input:checked + .toggle-slider {
+      background-color: var(--primary-color);
+    }
+    
+    input:checked + .toggle-slider:before {
+      transform: translateX(26px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="screen">
+      <!-- iOS Status Bar -->
+      <div class="status-bar">
+        <span class="status-bar-time">9:41</span>
+        <div class="status-bar-icons">
+          <i class="fas fa-signal"></i>
+          <i class="fas fa-wifi"></i>
+          <i class="fas fa-battery-full"></i>
+        </div>
+      </div>
+
+      <!-- Settings Header -->
+      <div style="padding: var(--spacing-md); display: flex; align-items: center; border-bottom: 1px solid rgba(0,0,0,0.1);">
+        <a href="profile.html" style="color: var(--primary-color); margin-right: 15px;">
+          <i class="fas fa-arrow-left"></i>
+        </a>
+        <h2 style="margin-bottom: 0;">Settings</h2>
+      </div>
+
+      <!-- Main Content -->
+      <div style="padding: var(--spacing-md); padding-bottom: 100px;">
+        <!-- Account Settings Section -->
+        <h3>Account</h3>
+        <ul class="settings-list">
+          <li class="settings-item">
+            <div class="flex items-center">
+              <div style="width: 36px; height: 36px; background-color: #f0f4ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                <i class="fas fa-user" style="color: var(--primary-color);"></i>
+              </div>
+              <span>Personal Information</span>
+            </div>
+            <i class="fas fa-chevron-right" style="font-size: 14px; color: var(--text-secondary);"></i>
+          </li>
+          <li class="settings-item">
+            <div class="flex items-center">
+              <div style="width: 36px; height: 36px; background-color: #f0f4ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                <i class="fas fa-lock" style="color: var(--primary-color);"></i>
+              </div>
+              <span>Change Password</span>
+            </div>
+            <i class="fas fa-chevron-right" style="font-size: 14px; color: var(--text-secondary);"></i>
+          </li>
+          <li class="settings-item">
+            <div class="flex items-center">
+              <div style="width: 36px; height: 36px; background-color: #f0f4ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                <i class="fas fa-credit-card" style="color: var(--primary-color);"></i>
+              </div>
+              <span>Payment Methods</span>
+            </div>
+            <i class="fas fa-chevron-right" style="font-size: 14px; color: var(--text-secondary);"></i>
+          </li>
+          <li class="settings-item">
+            <div class="flex items-center">
+              <div style="width: 36px; height: 36px; background-color: #f0f4ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                <i class="fas fa-crown" style="color: var(--primary-color);"></i>
+              </div>
+              <span>Subscription</span>
+            </div>
+            <div class="flex items-center">
+              <span style="font-size: 14px; color: var(--success-color); margin-right: 8px;">Pro</span>
+              <i class="fas fa-chevron-right" style="font-size: 14px; color: var(--text-secondary);"></i>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Application Settings Section -->
+        <h3 style="margin-top: 30px;">Application</h3>
+        <ul class="settings-list">
+          <li class="settings-item">
+            <div class="flex items-center">
+              <div style="width: 36px; height: 36px; background-color: #f0f4ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                <i class="fas fa-bell" style="color: var(--primary-color);"></i>
+              </div>
+              <span>Notifications</span>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="notification-toggle" checked>
+              <span class="toggle-slider"></span>
+            </label>
+          </li>
+          <li class="settings-item">
+            <div class="flex items-center">
+              <div style="width: 36px; height: 36px; background-color: #f0f4ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                <i class="fas fa-moon" style="color: var(--primary-color);"></i>
+              </div>
+              <span>Dark Mode</span>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="theme-toggle">
+              <span class="toggle-slider"></span>
+            </label>
+          </li>
+          <li class="settings-item">
+            <div class="flex items-center">
+              <div style="width: 36px; height: 36px; background-color: #f0f4ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                <i class="fas fa-language" style="color: var(--primary-color);"></i>
+              </div>
+              <span>App Language</span>
+            </div>
+            <div class="flex items-center">
+              <span style="font-size: 14px; color: var(--text-secondary); margin-right: 8px;">English</span>
+              <i class="fas fa-chevron-right" style="font-size: 14px; color: var(--text-secondary);"></i>
+            </div>
+          </li>
+          <li class="settings-item">
+            <div class="flex items-center">
+              <div style="width: 36px; height: 36px; background-color: #f0f4ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                <i class="fas fa-download" style="color: var(--primary-color);"></i>
+              </div>
+              <span>Download Offline Content</span>
+            </div>
+            <i class="fas fa-chevron-right" style="font-size: 14px; color: var(--text-secondary);"></i>
+          </li>
+        </ul>
+
+        <!-- Learning Settings Section -->
+        <h3 style="margin-top: 30px;">Learning</h3>
+        <ul class="settings-list">
+          <li class="settings-item">
+            <div class="flex items-center">
+              <div style="width: 36px; height: 36px; background-color: #f0f4ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                <i class="fas fa-graduation-cap" style="color: var(--primary-color);"></i>
+              </div>
+              <span>Learning Level</span>
+            </div>
+            <div class="flex items-center">
+              <span style="font-size: 14px; color: var(--text-secondary); margin-right: 8px;">Intermediate</span>
+              <i class="fas fa-chevron-right" style="font-size: 14px; color: var(--text-secondary);"></i>
+            </div>
+          </li>
+          <li class="settings-item">
+            <div class="flex items-center">
+              <div style="width: 36px; height: 36px; background-color: #f0f4ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                <i class="fas fa-microphone" style="color: var(--primary-color);"></i>
+              </div>
+              <span>Voice Recognition Sensitivity</span>
+            </div>
+            <div class="flex items-center">
+              <span style="font-size: 14px; color: var(--text-secondary); margin-right: 8px;">Medium</span>
+              <i class="fas fa-chevron-right" style="font-size: 14px; color: var(--text-secondary);"></i>
+            </div>
+          </li>
+          <li class="settings-item">
+            <div class="flex items-center">
+              <div style="width: 36px; height: 36px; background-color: #f0f4ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                <i class="fas fa-clock" style="color: var(--primary-color);"></i>
+              </div>
+              <span>Daily Reminder</span>
+            </div>
+            <div class="flex items-center">
+              <span style="font-size: 14px; color: var(--text-secondary); margin-right: 8px;">8:00 PM</span>
+              <i class="fas fa-chevron-right" style="font-size: 14px; color: var(--text-secondary);"></i>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Support Section -->
+        <h3 style="margin-top: 30px;">Support</h3>
+        <ul class="settings-list">
+          <li class="settings-item">
+            <div class="flex items-center">
+              <div style="width: 36px; height: 36px; background-color: #f0f4ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                <i class="fas fa-question-circle" style="color: var(--primary-color);"></i>
+              </div>
+              <span>Help Center</span>
+            </div>
+            <i class="fas fa-chevron-right" style="font-size: 14px; color: var(--text-secondary);"></i>
+          </li>
+          <li class="settings-item">
+            <div class="flex items-center">
+              <div style="width: 36px; height: 36px; background-color: #f0f4ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                <i class="fas fa-bug" style="color: var(--primary-color);"></i>
+              </div>
+              <span>Report a Problem</span>
+            </div>
+            <i class="fas fa-chevron-right" style="font-size: 14px; color: var(--text-secondary);"></i>
+          </li>
+          <li class="settings-item">
+            <div class="flex items-center">
+              <div style="width: 36px; height: 36px; background-color: #f0f4ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                <i class="fas fa-info-circle" style="color: var(--primary-color);"></i>
+              </div>
+              <span>About</span>
+            </div>
+            <i class="fas fa-chevron-right" style="font-size: 14px; color: var(--text-secondary);"></i>
+          </li>
+        </ul>
+
+        <div style="margin-top: 40px; text-align: center;">
+          <button style="background: none; border: none; color: var(--error-color); font-size: 16px; font-weight: 500;">Sign Out</button>
+        </div>
+
+        <div style="margin-top: 20px; text-align: center; font-size: 12px; color: var(--text-secondary);">
+          DialogueGenie v1.0.0
+        </div>
+      </div>
+
+      <!-- iOS Tab Bar -->
+      <div class="tab-bar">
+        <div class="tab-item">
+          <i class="tab-icon fas fa-home"></i>
+          <span class="tab-label">Home</span>
+        </div>
+        <div class="tab-item">
+          <i class="tab-icon fas fa-comment-alt"></i>
+          <span class="tab-label">Chat</span>
+        </div>
+        <div class="tab-item">
+          <i class="tab-icon fas fa-graduation-cap"></i>
+          <span class="tab-label">Practice</span>
+        </div>
+        <div class="tab-item">
+          <i class="tab-icon fas fa-chart-line"></i>
+          <span class="tab-label">Progress</span>
+        </div>
+        <div class="tab-item active">
+          <i class="tab-icon fas fa-user"></i>
+          <span class="tab-label">Profile</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html> 
