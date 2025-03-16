@@ -75,18 +75,29 @@ a {
   width: 100%;
   max-width: 390px; /* iPhone 16 Pro width */
   margin: 0 auto;
-  padding: var(--spacing-md);
-  overflow-x: hidden;
+  height: 100%;
+  position: relative;
 }
 
 .screen {
   position: relative;
   border-radius: 40px;
-  overflow: hidden;
   background: var(--background-primary);
   height: 844px; /* iPhone 16 Pro height */
+  width: 390px; /* iPhone 14 Pro width */
   border: 2px solid #eaeaea;
   box-shadow: var(--shadow-lg);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1;
+  padding: var(--spacing-md);
+  padding-bottom: calc(83px + var(--spacing-md)); /* Account for tab bar height plus padding */
+  position: relative;
 }
 
 /* iOS Status Bar */
@@ -100,6 +111,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 100;
+  width: 100%;
 }
 
 .status-bar-time {
@@ -114,10 +126,11 @@ a {
 /* iOS Tab Bar */
 .tab-bar {
   height: 83px;
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  left: 0;
-  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 390px; /* Match screen width */
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -125,6 +138,7 @@ a {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-top: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 100;
 }
 
 .tab-item {
@@ -259,9 +273,10 @@ a {
 .chat-container {
   display: flex;
   flex-direction: column;
-  padding: var(--spacing-md);
+  height: calc(100vh - 200px); /* Adjust height to account for input container and headers */
   overflow-y: auto;
-  height: calc(100% - 130px); /* Account for status bar and tab bar */
+  padding: var(--spacing-md);
+  padding-bottom: 100px; /* Space for input container */
 }
 
 /* Home Page */
@@ -270,12 +285,14 @@ a {
   align-items: center;
   justify-content: space-between;
   margin-bottom: var(--spacing-lg);
+  padding-top: var(--spacing-md);
 }
 
 .lessons-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
 }
 
 /* Progress Page */
@@ -320,17 +337,17 @@ a {
   align-items: center;
 }
 
-/* Chat Page */
+/* Chat Components */
 .chat-input-container {
   position: fixed;
-  bottom: 83px;
-  left: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  padding: var(--spacing-sm);
+  bottom: 83px; /* Height of the tab bar */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 390px; /* Match screen width */
   background-color: var(--background-primary);
   border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: var(--spacing-sm);
+  z-index: 10;
 }
 
 .chat-input {
@@ -338,7 +355,19 @@ a {
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: 24px;
   border: 1px solid #ddd;
-  margin-right: var(--spacing-sm);
+  margin: 0 var(--spacing-sm);
+  height: 40px;
+  font-size: 14px;
+}
+
+.input-controls {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: var(--background-primary);
+  padding: 8px;
+  border-radius: 24px;
+  border: 1px solid #ddd;
 }
 
 /* Practice Page */
@@ -379,12 +408,41 @@ a {
   overflow: hidden;
   box-shadow: var(--shadow);
   border: 1px solid #eee;
+  margin-bottom: 12px;
 }
 
 iframe {
   width: 100%;
   height: 500px;
   border: none;
+}
+
+.view-full-page {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.view-full-page:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.view-full-page i {
+  margin-left: 6px;
+  font-size: 12px;
 }
 
 /* Utility Classes */
@@ -1269,4 +1327,12 @@ button.active i.fa-microphone {
 .form-textarea:focus {
   outline: none;
   border-color: var(--primary-color);
+}
+
+/* Enhanced Input Controls */
+.chat-input-container .input-controls {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: var(--background-primary);
 } 
