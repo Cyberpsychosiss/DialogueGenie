@@ -819,4 +819,454 @@ button.active i.fa-microphone {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 15px;
+}
+
+/* Practice Session Styles (NEW) */
+.practice-main-content {
+  position: relative;
+  z-index: 1;
+}
+
+.practice-session-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background-primary);
+  z-index: 10;
+  overflow-y: auto;
+}
+
+.practice-session-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: var(--spacing-md);
+  padding-bottom: 80px; /* Make room for the input container */
+}
+
+.practice-session-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.practice-back-button {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 20px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.practice-exercise-badge {
+  margin-left: auto;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+.difficulty-controls {
+  margin-bottom: 15px;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.difficulty-controls > div:first-child {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.difficulty-controls span i {
+  color: var(--primary-color);
+}
+
+.make-easier-btn {
+  background: none;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: var(--text-secondary);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.challenge-btn {
+  background-color: var(--primary-color);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.scenario-container {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.scenario-container h4 {
+  margin-bottom: 8px;
+}
+
+.scenario-container p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.key-phrases-container {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.key-phrases-header {
+  font-size: 13px;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+
+.key-phrases-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.key-phrase {
+  font-size: 12px;
+  padding: 3px 8px;
+  background-color: rgba(74, 111, 234, 0.1);
+  border-radius: 12px;
+  color: var(--primary-color);
+}
+
+.tone-guidance {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+}
+
+.tone-suggestion {
+  font-size: 13px;
+  color: var(--accent-color);
+}
+
+.tone-suggestion span {
+  font-weight: 500;
+}
+
+.pronunciation-focus {
+  font-size: 13px;
+  color: var(--success-color);
+}
+
+.pronunciation-focus span {
+  font-weight: 500;
+}
+
+.practice-chat-container {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.emotion-icon {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.emotion-icon i {
+  font-size: 12px;
+  color: var(--primary-color);
+}
+
+.tone-indicator {
+  margin-bottom: 5px;
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.tone-indicator i {
+  color: var(--success-color);
+}
+
+.practice-input-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--spacing-md);
+  background-color: var(--background-primary);
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+  z-index: 11;
+}
+
+.voice-recognition-status {
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: rgba(40, 167, 69, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.voice-recognition-status > div:first-child {
+  font-size: 13px;
+  color: var(--success-color);
+}
+
+.voice-recognition-status > div:last-child {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.voice-recognition-status i.fa-magic {
+  margin-right: 3px;
+  color: var(--primary-color);
+}
+
+.input-controls {
+  display: flex;
+  align-items: center;
+}
+
+.mic-button {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  padding: 0 8px;
+  margin-right: 8px;
+  position: relative;
+  cursor: pointer;
+}
+
+.mic-active-indicator {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: var(--success-color);
+  border-radius: 50%;
+  top: 0;
+  right: 3px;
+}
+
+.send-button {
+  background: var(--primary-color);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.send-button i {
+  color: white;
+}
+
+.speaking-suggestions {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: rgba(74, 111, 234, 0.05);
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.suggestion-chips {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.suggestion-chip {
+  padding: 3px 8px;
+  background-color: rgba(74, 111, 234, 0.1);
+  border-radius: 12px;
+  color: var(--primary-color);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* Character Creation Styles */
+.character-creation-modal .modal-body {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.avatar-selector {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.avatar-option {
+  text-align: center;
+  cursor: pointer;
+}
+
+.avatar-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.avatar-circle:hover {
+  border-color: var(--primary-color-light);
+  transform: scale(1.05);
+}
+
+.avatar-circle.selected {
+  border: 2px solid var(--primary-color);
+}
+
+.avatar-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.field-pill, .topic-pill {
+  padding: 8px 12px;
+  background-color: rgba(74, 111, 234, 0.1);
+  border-radius: 16px;
+  color: var(--primary-color);
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.field-pill:hover, .topic-pill:hover {
+  background-color: rgba(74, 111, 234, 0.2);
+}
+
+.field-pill.selected, .topic-pill.selected {
+  background-color: rgba(74, 111, 234, 0.3);
+  font-weight: 500;
+}
+
+.field-pill input, .topic-pill input {
+  margin-right: 5px;
+}
+
+.topic-pill {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.progress-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 5px;
+  display: block;
+}
+
+.speech-speed-slider {
+  flex: 1;
+  height: 4px;
+  -webkit-appearance: none;
+  background: linear-gradient(to right, var(--primary-color-light), var(--primary-color));
+  border-radius: 2px;
+}
+
+.speech-speed-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.custom-character-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--accent-color);
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.character-controls {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.trait-selectors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.trait-item {
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.trait-item input {
+  margin-right: 5px;
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-family: inherit;
+  min-height: 80px;
+  resize: vertical;
+  margin-bottom: 5px;
+}
+
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
 } 

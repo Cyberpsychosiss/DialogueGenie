@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DialogueGenie - Practice</title>
+  <title>Practice - DialogueGenie</title>
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   <div class="container">
     <div class="screen">
-      <!-- iOS Status Bar -->
+      <!-- Status Bar -->
       <div class="status-bar">
-        <span class="status-bar-time">9:41</span>
+        <div class="status-bar-time">9:41</div>
         <div class="status-bar-icons">
           <i class="fas fa-signal"></i>
           <i class="fas fa-wifi"></i>
@@ -21,297 +21,298 @@
       </div>
 
       <!-- Main Content -->
-      <div style="padding: var(--spacing-md); padding-bottom: 100px;">
-        <h1>Practice</h1>
-        <p style="color: var(--text-secondary); margin-top: -10px; margin-bottom: 20px;">
-          Choose a scenario to practice your speaking skills
-        </p>
-
-        <!-- Practice Category Tabs -->
-        <div style="display: flex; border-bottom: 1px solid #eee; margin-bottom: 20px; overflow-x: auto;">
-          <div style="padding: 10px 15px; border-bottom: 2px solid var(--primary-color); color: var(--primary-color); font-weight: 600; white-space: nowrap;">All</div>
-          <div style="padding: 10px 15px; color: var(--text-secondary); white-space: nowrap;">Business</div>
-          <div style="padding: 10px 15px; color: var(--text-secondary); white-space: nowrap;">Travel</div>
-          <div style="padding: 10px 15px; color: var(--text-secondary); white-space: nowrap;">Social</div>
-          <div style="padding: 10px 15px; color: var(--text-secondary); white-space: nowrap;">Academic</div>
-          <div style="padding: 10px 15px; color: var(--text-secondary); white-space: nowrap;">Daily Life</div>
-          <div style="padding: 10px 15px; color: var(--text-secondary); white-space: nowrap;">Professional</div>
-        </div>
-
-        <!-- Difficulty Filter (NEW) -->
-        <div style="display: flex; gap: 10px; margin-bottom: 20px; overflow-x: auto;">
-          <div style="padding: 6px 15px; background-color: #f0f4ff; border-radius: 20px; color: var(--primary-color); font-size: 13px; white-space: nowrap;">
-            <i class="fas fa-filter"></i> All Levels
-          </div>
-          <div style="padding: 6px 15px; background-color: rgba(220, 220, 220, 0.3); border-radius: 20px; color: var(--text-secondary); font-size: 13px; white-space: nowrap;">
-            Beginner
-          </div>
-          <div style="padding: 6px 15px; background-color: var(--primary-color); border-radius: 20px; color: white; font-size: 13px; white-space: nowrap;">
-            Intermediate
-          </div>
-          <div style="padding: 6px 15px; background-color: rgba(220, 220, 220, 0.3); border-radius: 20px; color: var(--text-secondary); font-size: 13px; white-space: nowrap;">
-            Advanced
-          </div>
-          <div style="padding: 6px 15px; background-color: rgba(220, 220, 220, 0.3); border-radius: 20px; color: var(--text-secondary); font-size: 13px; white-space: nowrap;">
-            <i class="fas fa-shield-alt"></i> Adaptive
+      <div class="practice-main-content" style="padding: var(--spacing-md); margin-bottom: 80px; overflow-y: auto; height: calc(100% - 160px);">
+        <h2>Practice Speaking</h2>
+        <p class="mb-md">Choose a scenario to practice your speaking skills in real-world situations.</p>
+        
+        <!-- Dynamic Difficulty Filter -->
+        <div class="difficulty-controls mb-md">
+          <div>Difficulty Level:</div>
+          <div class="flex items-center gap-sm">
+            <button class="make-easier-btn">Make Easier</button>
+            <span style="position: relative; width: 120px; height: 6px; background-color: #eee; border-radius: 3px;">
+              <div style="position: absolute; width: 50%; height: 6px; background-color: var(--primary-color); border-radius: 3px;"></div>
+              <div class="difficulty-slider" style="left: 50%"></div>
+            </span>
+            <button class="challenge-btn">Challenge Me</button>
           </div>
         </div>
-
+        
+        <!-- Category Tabs -->
+        <div class="mb-md" style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 5px;">
+          <div style="padding: 8px 16px; background-color: var(--primary-color); color: white; border-radius: 20px; font-size: 14px;">All</div>
+          <div style="padding: 8px 16px; background-color: #f5f5f5; color: var(--text-primary); border-radius: 20px; font-size: 14px;">Business</div>
+          <div style="padding: 8px 16px; background-color: #f5f5f5; color: var(--text-primary); border-radius: 20px; font-size: 14px;">Travel</div>
+          <div style="padding: 8px 16px; background-color: #f5f5f5; color: var(--text-primary); border-radius: 20px; font-size: 14px;">Social</div>
+          <div style="padding: 8px 16px; background-color: #f5f5f5; color: var(--text-primary); border-radius: 20px; font-size: 14px;">Academic</div>
+        </div>
+        
         <!-- Active Practice Session -->
-        <div class="card practice-card">
-          <div style="position: absolute; right: 16px; top: 16px; background-color: var(--primary-color); color: white; font-size: 12px; padding: 4px 8px; border-radius: 12px;">
-            In Progress
+        <div class="card mb-md">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <span class="practice-topic">Business</span>
+            <div style="display: flex; align-items: center; gap: 5px;">
+              <span style="background-color: var(--primary-color); color: white; font-size: 12px; padding: 2px 8px; border-radius: 10px;">Intermediate</span>
+              <!-- Emotion Tags -->
+              <span style="background-color: var(--accent-color); color: white; font-size: 12px; padding: 2px 8px; border-radius: 10px;">
+                <i class="fas fa-lightbulb"></i> Persuasive
+              </span>
+            </div>
           </div>
           <h3>Business Meeting</h3>
-          <div class="practice-topic">Intermediate Level</div>
-          <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: var(--spacing-md);">
-            Practice vocabulary and phrases for participating in business meetings, including making proposals, discussing ideas, and reaching agreements.
-          </p>
-          
-          <!-- Dynamic Difficulty Indicator (NEW) -->
-          <div style="display: flex; align-items: center; margin-bottom: 12px; background-color: #f8f9fa; padding: 10px; border-radius: 8px;">
-            <div style="flex: 1;">
-              <div style="font-size: 13px; margin-bottom: 4px; display: flex; justify-content: space-between;">
-                <span style="color: var(--text-primary); font-weight: 500;">Difficulty Adjustment</span>
-                <span style="color: var(--primary-color); font-weight: 600;">Adapting to your level</span>
-              </div>
-              <div style="height: 8px; background-color: #eee; border-radius: 4px; position: relative;">
-                <div style="position: absolute; left: 33%; transform: translateX(-50%); width: 12px; height: 12px; border-radius: 50%; border: 2px solid white; background-color: var(--primary-color); top: -2px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"></div>
-                <div style="display: flex; justify-content: space-between; position: absolute; width: 100%; top: -2px; padding: 0 6px; box-sizing: border-box;">
-                  <span style="font-size: 10px; color: var(--text-secondary);">Easier</span>
-                  <span style="font-size: 10px; color: var(--text-secondary);">Your Level</span>
-                  <span style="font-size: 10px; color: var(--text-secondary);">Harder</span>
-                </div>
-              </div>
-            </div>
-            <div style="margin-left: 15px;">
-              <button style="background: none; border: none; color: var(--primary-color); font-size: 20px;">
-                <i class="fas fa-cog"></i>
-              </button>
-            </div>
+          <p>Practice leading a business meeting, presenting ideas, and responding to questions from colleagues.</p>
+          <div style="margin: 15px 0; width: 100%; height: 6px; background-color: #f5f5f5; border-radius: 3px;">
+            <div style="width: 60%; height: 6px; background-color: var(--primary-color); border-radius: 3px;"></div>
           </div>
-          
-          <div style="width: 100%; height: 6px; background-color: #eee; border-radius: 3px; margin-bottom: 8px;">
-            <div style="width: 65%; height: 100%; background-color: var(--primary-color); border-radius: 3px;"></div>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="font-size: 14px; color: var(--text-secondary);">Progress: 60%</div>
+            <button id="start-practice" class="button button-primary">Continue Practice</button>
           </div>
-          <div class="flex justify-between" style="font-size: 12px; margin-bottom: var(--spacing-md);">
-            <span>Progress: 65%</span>
-            <span>Estimated time: 10 mins left</span>
-          </div>
-          <button id="start-practice" class="button button-primary" style="width: 100%;">Continue Practice</button>
         </div>
 
         <!-- Suggested Practice Sessions -->
-        <h3>Recommended for You</h3>
-
-        <div class="card practice-card">
-          <div style="display: flex; align-items: flex-start; margin-bottom: var(--spacing-md);">
-            <div style="width: 80px; height: 80px; border-radius: 12px; overflow: hidden; margin-right: 15px; flex-shrink: 0;">
-              <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Job Interview" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div>
-              <h4 style="margin-bottom: 4px;">Job Interview Success</h4>
-              <div class="practice-topic">Advanced Level</div>
-              <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 8px;">
-                Master advanced interview techniques and professional vocabulary
-              </p>
-              <div class="flex items-center" style="font-size: 12px; color: var(--text-secondary);">
-                <span style="margin-right: 15px;"><i class="fas fa-clock" style="margin-right: 4px;"></i> 25 mins</span>
-                <span><i class="fas fa-star" style="margin-right: 4px; color: #FFD700;"></i> 4.9 (124)</span>
-              </div>
+        <h3>Suggested for You</h3>
+        <p class="mb-md">Based on your learning goals and progress</p>
+        
+        <div class="card mb-md">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <span class="practice-topic">Business</span>
+            <div style="display: flex; align-items: center; gap: 5px;">
+              <span style="background-color: var(--primary-color); color: white; font-size: 12px; padding: 2px 8px; border-radius: 10px;">Advanced</span>
+              <!-- Emotion Tags -->
+              <span style="background-color: var(--accent-color); color: white; font-size: 12px; padding: 2px 8px; border-radius: 10px;">
+                <i class="fas fa-user-tie"></i> Professional
+              </span>
             </div>
           </div>
-          
-          <!-- Emotion/Tone Tags (NEW) -->
-          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px;">
-            <div style="font-size: 11px; padding: 3px 8px; background-color: rgba(74, 111, 234, 0.1); border-radius: 12px; color: var(--primary-color);">
-              <i class="fas fa-check-circle" style="margin-right: 3px;"></i> Professional Tone
-            </div>
-            <div style="font-size: 11px; padding: 3px 8px; background-color: rgba(255, 107, 107, 0.1); border-radius: 12px; color: var(--accent-color);">
-              <i class="fas fa-user-tie" style="margin-right: 3px;"></i> Formal Language
-            </div>
-            <div style="font-size: 11px; padding: 3px 8px; background-color: rgba(40, 167, 69, 0.1); border-radius: 12px; color: var(--success-color);">
-              <i class="fas fa-brain" style="margin-right: 3px;"></i> Adaptive Difficulty
-            </div>
+          <h3>Job Interview Success</h3>
+          <p>Practice answering common job interview questions and learn how to highlight your skills effectively.</p>
+          <div style="margin-top: 15px; display: flex; justify-content: flex-end;">
+            <button class="button button-primary">Start Practice</button>
           </div>
-          
-          <button class="button button-secondary" style="width: 100%;">Start Practice</button>
         </div>
-
-        <div class="card practice-card">
-          <div style="display: flex; align-items: flex-start; margin-bottom: var(--spacing-md);">
-            <div style="width: 80px; height: 80px; border-radius: 12px; overflow: hidden; margin-right: 15px; flex-shrink: 0;">
-              <img src="https://images.unsplash.com/photo-1517840901100-8179e982acb7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Travel Conversations" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div>
-              <h4 style="margin-bottom: 4px;">Travel Conversations</h4>
-              <div class="practice-topic">Intermediate Level</div>
-              <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 8px;">
-                Essential phrases for hotels, transportation, and sightseeing
-              </p>
-              <div class="flex items-center" style="font-size: 12px; color: var(--text-secondary);">
-                <span style="margin-right: 15px;"><i class="fas fa-clock" style="margin-right: 4px;"></i> 20 mins</span>
-                <span><i class="fas fa-star" style="margin-right: 4px; color: #FFD700;"></i> 4.7 (98)</span>
-              </div>
+        
+        <div class="card mb-md">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <span class="practice-topic">Travel</span>
+            <div style="display: flex; align-items: center; gap: 5px;">
+              <span style="background-color: var(--primary-color); color: white; font-size: 12px; padding: 2px 8px; border-radius: 10px;">Beginner</span>
+              <!-- Emotion Tags -->
+              <span style="background-color: var(--accent-color); color: white; font-size: 12px; padding: 2px 8px; border-radius: 10px;">
+                <i class="fas fa-smile"></i> Friendly
+              </span>
             </div>
           </div>
-          
-          <!-- Emotion/Tone Tags (NEW) -->
-          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px;">
-            <div style="font-size: 11px; padding: 3px 8px; background-color: rgba(74, 111, 234, 0.1); border-radius: 12px; color: var(--primary-color);">
-              <i class="fas fa-smile" style="margin-right: 3px;"></i> Friendly Tone
-            </div>
-            <div style="font-size: 11px; padding: 3px 8px; background-color: rgba(255, 107, 107, 0.1); border-radius: 12px; color: var(--accent-color);">
-              <i class="fas fa-comments" style="margin-right: 3px;"></i> Casual Language
-            </div>
-            <div style="font-size: 11px; padding: 3px 8px; background-color: rgba(40, 167, 69, 0.1); border-radius: 12px; color: var(--success-color);">
-              <i class="fas fa-volume-up" style="margin-right: 3px;"></i> Pronunciation Focus
-            </div>
-          </div>
-          
-          <button class="button button-secondary" style="width: 100%;">Start Practice</button>
-        </div>
-
-        <!-- Hidden Practice Content (Displayed when Continue Practice is clicked) -->
-        <div id="practice-content" style="display: none;">
-          <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--background-primary); z-index: 1000; padding: var(--spacing-md);">
-            <div style="display: flex; align-items: center; margin-bottom: 20px;">
-              <button style="background: none; border: none; color: var(--primary-color); font-size: 20px; margin-right: 15px;">
-                <i class="fas fa-arrow-left"></i>
-              </button>
-              <h3 style="margin-bottom: 0;">Business Meeting</h3>
-              <div style="margin-left: auto; background-color: var(--primary-color); color: white; font-size: 12px; padding: 4px 8px; border-radius: 12px;">
-                Exercise 5/8
-              </div>
-            </div>
-
-            <!-- Dynamic Difficulty Controls (NEW) -->
-            <div style="margin-bottom: 15px; background-color: #f8f9fa; padding: 10px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
-              <div style="font-size: 13px; font-weight: 500; color: var(--text-primary);">
-                <span style="color: var(--primary-color);"><i class="fas fa-robot"></i></span> AI adapting to your level
-              </div>
-              <div>
-                <button style="background: none; border: none; padding: 5px 10px; border-radius: 4px; color: var(--text-secondary); font-size: 12px;">
-                  <i class="fas fa-angle-down"></i> Make easier
-                </button>
-                <button style="background: none; border: none; padding: 5px 10px; border-radius: 4px; background-color: var(--primary-color); color: white; font-size: 12px;">
-                  <i class="fas fa-angle-up"></i> Challenge me
-                </button>
-              </div>
-            </div>
-
-            <div style="background-color: #f8f9fa; border-radius: 12px; padding: 16px; margin-bottom: 20px;">
-              <h4 style="margin-bottom: 8px;">Scenario: Proposing a New Marketing Strategy</h4>
-              <p style="font-size: 14px; margin-bottom: 8px;">
-                You are attending a marketing team meeting. Your task is to propose a new social media strategy for the upcoming product launch.
-              </p>
-              
-              <!-- Tone & Emotion Guidance (NEW) -->
-              <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(0,0,0,0.05);">
-                <div style="font-size: 13px; color: var(--primary-color); margin-bottom: 8px;">
-                  <i class="fas fa-lightbulb"></i> Use these key phrases:
-                </div>
-                <div style="display: flex; flex-wrap: wrap; gap: 6px;">
-                  <span style="font-size: 12px; padding: 3px 8px; background-color: rgba(74, 111, 234, 0.1); border-radius: 12px; color: var(--primary-color);">increase engagement</span>
-                  <span style="font-size: 12px; padding: 3px 8px; background-color: rgba(74, 111, 234, 0.1); border-radius: 12px; color: var(--primary-color);">target audience</span>
-                  <span style="font-size: 12px; padding: 3px 8px; background-color: rgba(74, 111, 234, 0.1); border-radius: 12px; color: var(--primary-color);">conversion rate</span>
-                  <span style="font-size: 12px; padding: 3px 8px; background-color: rgba(74, 111, 234, 0.1); border-radius: 12px; color: var(--primary-color);">marketing analytics</span>
-                </div>
-              </div>
-              
-              <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(0,0,0,0.05); display: flex; justify-content: space-between;">
-                <div style="font-size: 13px; color: var(--accent-color);">
-                  <i class="fas fa-theater-masks"></i> Tone suggestion: 
-                  <span style="font-weight: 500;">Professional & Confident</span>
-                </div>
-                <div style="font-size: 13px; color: var(--success-color);">
-                  <i class="fas fa-volume-up"></i> Pronunciation focus: 
-                  <span style="font-weight: 500;">-tion endings</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Practice Chat Interface -->
-            <div class="chat-container" style="height: calc(100% - 230px);">
-              <div class="chat-bubble chat-bubble-ai">
-                <!-- Emotion Icon (NEW) -->
-                <div style="position: absolute; top: -10px; left: -10px; width: 22px; height: 22px; border-radius: 50%; background-color: white; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                  <i class="fas fa-user-tie" style="font-size: 12px; color: var(--primary-color);"></i>
-                </div>
-                
-                <!-- Tone Indicator (NEW) -->
-                <div style="margin-bottom: 5px; font-size: 11px; color: var(--text-secondary);">
-                  <i class="fas fa-volume-up" style="color: var(--success-color);"></i> Professional tone
-                </div>
-                
-                Hello team! As the marketing manager, I'd like to hear your proposals for our new product launch. Sarah, I believe you have some ideas for our social media strategy?
-              </div>
-            </div>
-
-            <!-- Practice Input Container -->
-            <div style="position: fixed; bottom: 20px; left: 16px; right: 16px; display: flex; flex-direction: column;">
-              <!-- Real-time Pronunciation Guidance (NEW) -->
-              <div style="margin-bottom: 10px; padding: 8px 12px; border-radius: 8px; background-color: rgba(40, 167, 69, 0.1); display: flex; justify-content: space-between; align-items: center;">
-                <div style="font-size: 13px; color: var(--success-color);">
-                  <i class="fas fa-microphone"></i> Voice recognition active
-                </div>
-                <div style="font-size: 13px; color: var(--text-secondary);">
-                  <i class="fas fa-magic" style="margin-right: 3px; color: var(--primary-color);"></i> Suggestions enabled
-                </div>
-              </div>
-              
-              <div style="display: flex; align-items: center;">
-                <button style="background: none; border: none; color: var(--text-secondary); padding: 0 8px; margin-right: 8px; position: relative;">
-                  <i class="fas fa-microphone"></i>
-                  <!-- Active indicator -->
-                  <div style="position: absolute; width: 8px; height: 8px; background-color: var(--success-color); border-radius: 50%; top: 0; right: 3px;"></div>
-                </button>
-                <input type="text" class="chat-input" placeholder="Respond to the scenario...">
-                <button style="background: var(--primary-color); border: none; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-left: 8px;">
-                  <i class="fas fa-paper-plane" style="color: white;"></i>
-                </button>
-              </div>
-              
-              <!-- Speaking Suggestions (NEW) -->
-              <div style="margin-top: 10px; padding: 8px 12px; border-radius: 8px; background-color: rgba(74, 111, 234, 0.05); font-size: 12px; color: var(--text-secondary);">
-                <div style="display: flex; align-items: center; gap: 10px;">
-                  <span style="padding: 3px 8px; background-color: rgba(74, 111, 234, 0.1); border-radius: 12px; color: var(--primary-color);">
-                    I'd like to propose a strategy focused on...
-                  </span>
-                  <span style="padding: 3px 8px; background-color: rgba(74, 111, 234, 0.1); border-radius: 12px; color: var(--primary-color);">
-                    Our target audience consists of...
-                  </span>
-                  <span style="padding: 3px 8px; background-color: rgba(74, 111, 234, 0.1); border-radius: 12px; color: var(--primary-color);">
-                    <i class="fas fa-plus"></i>
-                  </span>
-                </div>
-              </div>
-            </div>
+          <h3>Travel Conversations</h3>
+          <p>Learn essential phrases for ordering food, asking for directions, and making hotel reservations while traveling.</p>
+          <div style="margin-top: 15px; display: flex; justify-content: flex-end;">
+            <button class="button button-primary">Start Practice</button>
           </div>
         </div>
       </div>
 
-      <!-- iOS Tab Bar -->
+      <!-- Tab Bar -->
       <div class="tab-bar">
         <div class="tab-item">
-          <i class="tab-icon fas fa-home"></i>
+          <i class="fas fa-home tab-icon"></i>
           <span class="tab-label">Home</span>
         </div>
-        <div class="tab-item">
-          <i class="tab-icon fas fa-comment-alt"></i>
-          <span class="tab-label">Chat</span>
-        </div>
         <div class="tab-item active">
-          <i class="tab-icon fas fa-graduation-cap"></i>
+          <i class="fas fa-comment-alt tab-icon"></i>
           <span class="tab-label">Practice</span>
         </div>
         <div class="tab-item">
-          <i class="tab-icon fas fa-chart-line"></i>
+          <i class="fas fa-chart-line tab-icon"></i>
           <span class="tab-label">Progress</span>
         </div>
         <div class="tab-item">
-          <i class="tab-icon fas fa-user"></i>
+          <i class="fas fa-user tab-icon"></i>
           <span class="tab-label">Profile</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hidden Practice Session Overlay -->
+  <div id="practice-content" class="practice-session-overlay" style="display: none;">
+    <div class="practice-session-container">
+      <div class="practice-session-header">
+        <button class="practice-back-button">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <h3>Business Meeting</h3>
+        <div class="practice-exercise-badge">Intermediate</div>
+      </div>
+      
+      <!-- Difficulty Controls -->
+      <div class="difficulty-controls">
+        <div>Current difficulty: <span style="color: var(--primary-color);">Intermediate</span></div>
+        <div class="flex items-center gap-sm">
+          <button class="make-easier-btn">Make Easier</button>
+          <span style="position: relative; width: 80px; height: 6px; background-color: #eee; border-radius: 3px;">
+            <div style="position: absolute; width: 50%; height: 6px; background-color: var(--primary-color); border-radius: 3px;"></div>
+            <div class="difficulty-slider" style="left: 50%"></div>
+          </span>
+          <button class="challenge-btn">Challenge Me</button>
+        </div>
+      </div>
+      
+      <!-- Scenario Information -->
+      <div class="scenario-container">
+        <h4>Scenario: Marketing Strategy Meeting</h4>
+        <p>You're leading a meeting to discuss marketing strategies for a new product launch. Present your ideas and respond to questions from your team.</p>
+        
+        <div class="key-phrases-container">
+          <div class="key-phrases-header">Key phrases to practice:</div>
+          <div class="key-phrases-list">
+            <div class="key-phrase">I believe we should consider...</div>
+            <div class="key-phrase">Our target audience is...</div>
+            <div class="key-phrase">The data suggests that...</div>
+            <div class="key-phrase">Let me address your concern about...</div>
+          </div>
+        </div>
+        
+        <div class="tone-guidance">
+          <div class="tone-suggestion">Suggested tone: <span>Confident & Persuasive</span></div>
+          <div class="pronunciation-focus">Focus on: <span>Clear articulation</span></div>
+        </div>
+      </div>
+      
+      <!-- Practice Chat Container -->
+      <div class="practice-chat-container">
+        <!-- AI Message -->
+        <div style="display: flex; margin-bottom: 20px;">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background-color: var(--primary-color); color: white; display: flex; align-items: center; justify-content: center; margin-right: 10px;">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <div style="flex: 1;">
+            <div class="tone-indicator"><i class="fas fa-lightbulb"></i> Encouraging</div>
+            <div class="chat-bubble chat-bubble-ai" style="position: relative;">
+              <div class="emotion-icon">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <p>Welcome to our marketing strategy meeting. As team lead, could you start by presenting your main ideas for our new product launch?</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- User Message -->
+        <div style="display: flex; flex-direction: row-reverse; margin-bottom: 20px;">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background-color: #f0f0f0; display: flex; align-items: center; justify-content: center; margin-left: 10px;">
+            <i class="fas fa-user"></i>
+          </div>
+          <div style="flex: 1;">
+            <div class="tone-indicator" style="text-align: right;"><i class="fas fa-brain"></i> Thoughtful</div>
+            <div class="chat-bubble chat-bubble-user" style="position: relative;">
+              <div class="emotion-icon">
+                <i class="fas fa-brain"></i>
+              </div>
+              <p>Thank you for joining today. For our new product launch, I think we should focus on digital marketing channels, especially social media and influencer partnerships.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- AI Message -->
+        <div style="display: flex; margin-bottom: 20px;">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background-color: var(--primary-color); color: white; display: flex; align-items: center; justify-content: center; margin-right: 10px;">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <div style="flex: 1;">
+            <div class="tone-indicator"><i class="fas fa-lightbulb"></i> Curious</div>
+            <div class="chat-bubble chat-bubble-ai" style="position: relative;">
+              <div class="emotion-icon">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <p>That's an interesting approach. Could you elaborate on which social media platforms you believe would be most effective for our target audience? And how would you measure the success of these campaigns?</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Real-time Feedback -->
+        <div class="feedback-container show">
+          <div class="feedback-header">
+            <h4>Real-time Feedback</h4>
+            <div class="feedback-score">92/100</div>
+          </div>
+          
+          <div class="feedback-details">
+            <div class="feedback-metric">
+              <span>Grammar</span>
+              <div class="metric-bar">
+                <div class="metric-fill" style="width: 95%"></div>
+              </div>
+              <span>95%</span>
+            </div>
+            
+            <div class="feedback-metric">
+              <span>Pronunciation</span>
+              <div class="metric-bar">
+                <div class="metric-fill" style="width: 88%"></div>
+              </div>
+              <span>88%</span>
+            </div>
+            
+            <div class="feedback-metric">
+              <span>Fluency</span>
+              <div class="metric-bar">
+                <div class="metric-fill" style="width: 90%"></div>
+              </div>
+              <span>90%</span>
+            </div>
+            
+            <div class="feedback-metric">
+              <span>Vocabulary</span>
+              <div class="metric-bar">
+                <div class="metric-fill" style="width: 92%"></div>
+              </div>
+              <span>92%</span>
+            </div>
+          </div>
+          
+          <div class="feedback-analysis">
+            <div class="feedback-strengths">
+              <h5><i class="fas fa-check-circle" style="color: var(--success-color);"></i> Strengths</h5>
+              <ul>
+                <li>Good use of business vocabulary</li>
+                <li>Clear presentation of ideas</li>
+              </ul>
+            </div>
+            
+            <div class="feedback-improvements">
+              <h5><i class="fas fa-arrow-circle-up" style="color: var(--primary-color);"></i> Suggestions</h5>
+              <ul>
+                <li>Try using more specific examples</li>
+                <li>Work on clearer pronunciation of "digital"</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Practice Input Container -->
+      <div class="practice-input-container">
+        <div class="voice-recognition-status">
+          <div><i class="fas fa-microphone"></i> Voice recognition active</div>
+          <div><i class="fas fa-magic"></i> AI assistance enabled</div>
+        </div>
+        
+        <div class="input-controls">
+          <button class="mic-button active">
+            <i class="fas fa-microphone fa-lg"></i>
+            <div class="mic-active-indicator"></div>
+          </button>
+          <input class="chat-input" type="text" placeholder="Speak or type your response...">
+          <button class="send-button">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+        
+        <div class="speaking-suggestions">
+          <div class="suggestion-chips">
+            <div class="suggestion-chip">I believe Instagram would be ideal because...</div>
+            <div class="suggestion-chip">We would measure success through...</div>
+            <div class="suggestion-chip">Our key performance indicators include...</div>
+          </div>
         </div>
       </div>
     </div>
