@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DialogueGenie - Progress</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="screen">
+      <!-- iOS Status Bar -->
+      <div class="status-bar">
+        <span class="status-bar-time">9:41</span>
+        <div class="status-bar-icons">
+          <i class="fas fa-signal"></i>
+          <i class="fas fa-wifi"></i>
+          <i class="fas fa-battery-full"></i>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div style="padding: var(--spacing-md); padding-bottom: 100px;">
+        <h1>Progress</h1>
+        <p style="color: var(--text-secondary); margin-top: -10px; margin-bottom: 20px;">
+          Track your language learning journey
+        </p>
+
+        <!-- AI Insights Banner (NEW) -->
+        <div class="card" style="background: linear-gradient(135deg, var(--primary-color), #6d8ce8); color: white; margin-bottom: 20px; position: relative; overflow: hidden;">
+          <div style="position: absolute; bottom: -30px; right: -20px; font-size: 80px; opacity: 0.1;">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3 style="margin-bottom: 8px;">AI Learning Insights</h3>
+          <p style="font-size: 14px; margin-bottom: 15px; opacity: 0.9;">
+            Based on your recent practice sessions, we've analyzed your progress
+          </p>
+          <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+            <div style="background-color: rgba(255, 255, 255, 0.2); padding: 8px 12px; border-radius: 8px; flex: 1; text-align: center;">
+              <div style="font-size: 20px; font-weight: 600; margin-bottom: 4px;">+15%</div>
+              <div style="font-size: 12px; opacity: 0.9;">Vocabulary</div>
+            </div>
+            <div style="background-color: rgba(255, 255, 255, 0.2); padding: 8px 12px; border-radius: 8px; flex: 1; text-align: center;">
+              <div style="font-size: 20px; font-weight: 600; margin-bottom: 4px;">+8%</div>
+              <div style="font-size: 12px; opacity: 0.9;">Fluency</div>
+            </div>
+            <div style="background-color: rgba(255, 255, 255, 0.2); padding: 8px 12px; border-radius: 8px; flex: 1; text-align: center;">
+              <div style="font-size: 20px; font-weight: 600; margin-bottom: 4px;">+12%</div>
+              <div style="font-size: 12px; opacity: 0.9;">Confidence</div>
+            </div>
+          </div>
+          <button class="button" style="background-color: rgba(255, 255, 255, 0.2); border: 1px solid rgba(255, 255, 255, 0.3); color: white; width: 100%;">
+            View Detailed Analysis
+          </button>
+        </div>
+
+        <!-- Progress Overview -->
+        <div class="card" style="margin-bottom: 20px;">
+          <h3 style="margin-bottom: 15px;">Progress Overview</h3>
+          <div style="display: flex; text-align: center; justify-content: space-between; margin-bottom: 20px;">
+            <div>
+              <div style="font-size: 24px; font-weight: 600; color: var(--primary-color); margin-bottom: 4px;">7</div>
+              <div style="font-size: 14px; color: var(--text-secondary);">Day Streak</div>
+            </div>
+            <div>
+              <div style="font-size: 24px; font-weight: 600; color: var(--primary-color); margin-bottom: 4px;">12</div>
+              <div style="font-size: 14px; color: var(--text-secondary);">Total Hours</div>
+            </div>
+            <div>
+              <div style="font-size: 24px; font-weight: 600; color: var(--primary-color); margin-bottom: 4px;">32</div>
+              <div style="font-size: 14px; color: var(--text-secondary);">Conversations</div>
+            </div>
+          </div>
+          
+          <!-- Weekly Practice Chart (NEW) -->
+          <h4 style="margin-bottom: 10px; font-size: 15px;">Weekly Practice</h4>
+          <div style="height: 120px; display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid rgba(0,0,0,0.05);">
+            <div style="display: flex; flex-direction: column; align-items: center; width: 30px;">
+              <div style="height: 60px; width: 10px; background-color: var(--primary-color); border-radius: 5px; margin-bottom: 5px;"></div>
+              <div style="font-size: 11px; color: var(--text-secondary);">Mon</div>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; width: 30px;">
+              <div style="height: 40px; width: 10px; background-color: var(--primary-color); border-radius: 5px; margin-bottom: 5px;"></div>
+              <div style="font-size: 11px; color: var(--text-secondary);">Tue</div>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; width: 30px;">
+              <div style="height: 80px; width: 10px; background-color: var(--primary-color); border-radius: 5px; margin-bottom: 5px;"></div>
+              <div style="font-size: 11px; color: var(--text-secondary);">Wed</div>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; width: 30px;">
+              <div style="height: 30px; width: 10px; background-color: var(--primary-color); border-radius: 5px; margin-bottom: 5px;"></div>
+              <div style="font-size: 11px; color: var(--text-secondary);">Thu</div>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; width: 30px;">
+              <div style="height: 50px; width: 10px; background-color: var(--primary-color); border-radius: 5px; margin-bottom: 5px;"></div>
+              <div style="font-size: 11px; color: var(--text-secondary);">Fri</div>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; width: 30px;">
+              <div style="height: 65px; width: 10px; background-color: var(--primary-color); border-radius: 5px; margin-bottom: 5px;"></div>
+              <div style="font-size: 11px; color: var(--text-secondary);">Sat</div>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; width: 30px;">
+              <div style="height: 90px; width: 10px; background-color: var(--accent-color); border-radius: 5px; margin-bottom: 5px; position: relative;">
+                <div style="position: absolute; bottom: 100%; white-space: nowrap; left: 50%; transform: translateX(-50%); background-color: var(--accent-color); color: white; font-size: 10px; padding: 2px 6px; border-radius: 4px; margin-bottom: 4px;">
+                  Today: 25 min
+                </div>
+              </div>
+              <div style="font-size: 11px; color: var(--text-secondary);">Sun</div>
+            </div>
+          </div>
+          
+          <!-- Target Progress -->
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 5px;">
+            <span style="font-size: 14px; color: var(--text-primary);">Weekly Target: 120 mins</span>
+            <span style="font-size: 14px; color: var(--primary-color);">78%</span>
+          </div>
+          <div style="width: 100%; height: 6px; background-color: #eee; border-radius: 3px; margin-bottom: 15px;">
+            <div style="width: 78%; height: 100%; background-color: var(--primary-color); border-radius: 3px;"></div>
+          </div>
+        </div>
+
+        <!-- Skills Development -->
+        <div class="card" style="margin-bottom: 20px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+            <h3 style="margin: 0;">Skills Development</h3>
+            <button style="background: none; border: none; color: var(--primary-color); font-size: 14px;">View All</button>
+          </div>
+
+          <!-- Speaking Skill -->
+          <div style="margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <div>
+                <div style="font-weight: 500; margin-bottom: 4px;">Speaking</div>
+                <div style="font-size: 13px; color: var(--text-secondary);">
+                  <i class="fas fa-arrow-up" style="color: var(--success-color);"></i> +5% since last week
+                </div>
+              </div>
+              <div style="font-weight: 600; color: var(--primary-color);">78%</div>
+            </div>
+            <div style="width: 100%; height: 8px; background-color: #eee; border-radius: 4px;">
+              <div style="width: 78%; height: 100%; background-color: var(--primary-color); border-radius: 4px;"></div>
+            </div>
+            <div style="margin-top: 8px; padding: 8px; background-color: #f8f9fa; border-radius: 8px; font-size: 13px;">
+              <div style="margin-bottom: 5px; font-weight: 500;">
+                <i class="fas fa-check-circle" style="color: var(--success-color); margin-right: 5px;"></i> Strengths:
+              </div>
+              <p style="margin: 0 0 5px 0; padding-left: 20px; color: var(--text-secondary);">
+                Clear pronunciation of difficult English sounds
+              </p>
+              
+              <div style="margin: 5px 0; font-weight: 500;">
+                <i class="fas fa-lightbulb" style="color: var(--accent-color); margin-right: 5px;"></i> Focus on:
+              </div>
+              <p style="margin: 0; padding-left: 20px; color: var(--text-secondary);">
+                Increasing speaking speed for more natural conversations
+              </p>
+              
+              <!-- Personalized Suggestion (NEW) -->
+              <div style="margin-top: 10px; padding-top: 8px; border-top: 1px dashed rgba(0,0,0,0.1);">
+                <div style="font-size: 13px; font-weight: 500; display: flex; align-items: center;">
+                  <i class="fas fa-magic" style="color: var(--primary-color); margin-right: 5px;"></i> Suggestion:
+                </div>
+                <p style="margin: 5px 0 0 0; padding-left: 20px; color: var(--text-primary); font-size: 12px; background-color: rgba(74, 111, 234, 0.05); padding: 8px; border-radius: 6px;">
+                  Try our new <strong>"Rapid Response"</strong> business conversation exercise to improve your speaking speed and confidence in professional settings.
+                </p>
+                <button style="background-color: var(--primary-color); color: white; border: none; border-radius: 12px; font-size: 12px; margin-top: 8px; padding: 4px 10px; margin-left: 20px;">
+                  Start Exercise
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pronunciation Skill -->
+          <div style="margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <div>
+                <div style="font-weight: 500; margin-bottom: 4px;">Pronunciation</div>
+                <div style="font-size: 13px; color: var(--text-secondary);">
+                  <i class="fas fa-arrow-up" style="color: var(--success-color);"></i> +3% since last week
+                </div>
+              </div>
+              <div style="font-weight: 600; color: var(--primary-color);">65%</div>
+            </div>
+            <div style="width: 100%; height: 8px; background-color: #eee; border-radius: 4px;">
+              <div style="width: 65%; height: 100%; background-color: var(--primary-color); border-radius: 4px;"></div>
+            </div>
+            <div style="margin-top: 8px; padding: 8px; background-color: #f8f9fa; border-radius: 8px; font-size: 13px;">
+              <div style="margin-bottom: 5px; font-weight: 500;">
+                <i class="fas fa-check-circle" style="color: var(--success-color); margin-right: 5px;"></i> Strengths:
+              </div>
+              <p style="margin: 0 0 5px 0; padding-left: 20px; color: var(--text-secondary);">
+                Vowel sounds are consistently accurate
+              </p>
+              
+              <div style="margin: 5px 0; font-weight: 500;">
+                <i class="fas fa-lightbulb" style="color: var(--accent-color); margin-right: 5px;"></i> Focus on:
+              </div>
+              <p style="margin: 0; padding-left: 20px; color: var(--text-secondary);">
+                The "th" sound and word stress patterns
+              </p>
+              
+              <!-- Difficult Sounds Analysis (NEW) -->
+              <div style="margin-top: 10px; background-color: rgba(74, 111, 234, 0.05); padding: 8px; border-radius: 6px;">
+                <div style="font-size: 12px; font-weight: 500; margin-bottom: 5px;">
+                  <i class="fas fa-chart-line" style="color: var(--primary-color); margin-right: 5px;"></i> Sound Analysis:
+                </div>
+                <div style="display: flex; gap: 5px; flex-wrap: wrap;">
+                  <div style="background-color: rgba(255, 107, 107, 0.1); color: var(--accent-color); font-size: 11px; padding: 3px 8px; border-radius: 12px;">
+                    th (75%)
+                  </div>
+                  <div style="background-color: rgba(255, 166, 0, 0.1); color: #ff9800; font-size: 11px; padding: 3px 8px; border-radius: 12px;">
+                    r (82%)
+                  </div>
+                  <div style="background-color: rgba(76, 175, 80, 0.1); color: #4caf50; font-size: 11px; padding: 3px 8px; border-radius: 12px;">
+                    l (90%)
+                  </div>
+                  <div style="background-color: rgba(255, 152, 0, 0.1); color: #ff9800; font-size: 11px; padding: 3px 8px; border-radius: 12px;">
+                    word stress (80%)
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Grammar Skill -->
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <div>
+                <div style="font-weight: 500; margin-bottom: 4px;">Grammar</div>
+                <div style="font-size: 13px; color: var(--text-secondary);">
+                  <i class="fas fa-arrow-up" style="color: var(--success-color);"></i> +7% since last week
+                </div>
+              </div>
+              <div style="font-weight: 600; color: var(--primary-color);">82%</div>
+            </div>
+            <div style="width: 100%; height: 8px; background-color: #eee; border-radius: 4px;">
+              <div style="width: 82%; height: 100%; background-color: var(--primary-color); border-radius: 4px;"></div>
+            </div>
+            <div style="margin-top: 8px; padding: 8px; background-color: #f8f9fa; border-radius: 8px; font-size: 13px;">
+              <div style="margin-bottom: 5px; font-weight: 500;">
+                <i class="fas fa-check-circle" style="color: var(--success-color); margin-right: 5px;"></i> Strengths:
+              </div>
+              <p style="margin: 0 0 5px 0; padding-left: 20px; color: var(--text-secondary);">
+                Present and future tense usage is excellent
+              </p>
+              
+              <div style="margin: 5px 0; font-weight: 500;">
+                <i class="fas fa-lightbulb" style="color: var(--accent-color); margin-right: 5px;"></i> Focus on:
+              </div>
+              <p style="margin: 0; padding-left: 20px; color: var(--text-secondary);">
+                Past tense consistency and conditional statements
+              </p>
+              
+              <!-- Grammar Pattern Analysis (NEW) -->
+              <div style="margin-top: 10px; background-color: rgba(74, 111, 234, 0.05); padding: 8px; border-radius: 6px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                  <div style="font-size: 12px; font-weight: 500;">
+                    <i class="fas fa-book" style="color: var(--primary-color); margin-right: 5px;"></i> Grammar Patterns:
+                  </div>
+                  <div style="font-size: 11px; color: var(--primary-color);">View Details</div>
+                </div>
+                
+                <div style="font-size: 12px; margin-bottom: 5px;">Present Perfect</div>
+                <div style="height: 6px; background-color: #eee; border-radius: 3px; margin-bottom: 8px;">
+                  <div style="width: 60%; height: 100%; background-color: #ff9800; border-radius: 3px;"></div>
+                </div>
+                
+                <div style="font-size: 12px; margin-bottom: 5px;">Conditionals</div>
+                <div style="height: 6px; background-color: #eee; border-radius: 3px; margin-bottom: 8px;">
+                  <div style="width: 45%; height: 100%; background-color: var(--accent-color); border-radius: 3px;"></div>
+                </div>
+                
+                <div style="font-size: 12px; margin-bottom: 5px;">Passive Voice</div>
+                <div style="height: 6px; background-color: #eee; border-radius: 3px;">
+                  <div style="width: 85%; height: 100%; background-color: var(--success-color); border-radius: 3px;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Achievements -->
+        <div class="card" style="margin-bottom: 20px;">
+          <h3 style="margin-bottom: 15px;">Achievements</h3>
+          
+          <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 15px;">
+            <div style="display: flex; flex-direction: column; align-items: center; width: calc(25% - 8px); text-align: center;">
+              <div style="width: 50px; height: 50px; border-radius: 50%; background-color: var(--primary-color); display: flex; align-items: center; justify-content: center; color: white; font-size: 18px; margin-bottom: 5px;">
+                <i class="fas fa-fire"></i>
+              </div>
+              <div style="font-size: 12px; font-weight: 500;">7-Day Streak</div>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; width: calc(25% - 8px); text-align: center;">
+              <div style="width: 50px; height: 50px; border-radius: 50%; background-color: var(--primary-color); display: flex; align-items: center; justify-content: center; color: white; font-size: 18px; margin-bottom: 5px;">
+                <i class="fas fa-comments"></i>
+              </div>
+              <div style="font-size: 12px; font-weight: 500;">Fluent Speaker</div>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; width: calc(25% - 8px); text-align: center;">
+              <div style="width: 50px; height: 50px; border-radius: 50%; background-color: var(--primary-color); display: flex; align-items: center; justify-content: center; color: white; font-size: 18px; margin-bottom: 5px;">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <div style="font-size: 12px; font-weight: 500;">Business Pro</div>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; width: calc(25% - 8px); text-align: center;">
+              <div style="width: 50px; height: 50px; border-radius: 50%; background-color: #eee; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 18px; margin-bottom: 5px; position: relative;">
+                <i class="fas fa-plane"></i>
+                <div style="position: absolute; top: 0; right: 0; width: 18px; height: 18px; border-radius: 50%; background-color: #f5f5f5; display: flex; align-items: center; justify-content: center; border: 2px solid white;">
+                  <i class="fas fa-lock" style="font-size: 8px;"></i>
+                </div>
+              </div>
+              <div style="font-size: 12px; color: #aaa;">World Traveler</div>
+            </div>
+          </div>
+          
+          <!-- Achievement Progress (NEW) -->
+          <div style="margin-top: 15px; border-top: 1px solid rgba(0,0,0,0.05); padding-top: 15px;">
+            <h4 style="margin-bottom: 10px; font-size: 15px;">Next Achievement</h4>
+            
+            <div style="background-color: #f8f9fa; border-radius: 10px; padding: 12px; position: relative; overflow: hidden;">
+              <div style="position: absolute; top: -15px; right: -15px; font-size: 60px; opacity: 0.05;">
+                <i class="fas fa-globe-americas"></i>
+              </div>
+              
+              <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                <div style="width: 40px; height: 40px; border-radius: 50%; background-color: rgba(74, 111, 234, 0.1); display: flex; align-items: center; justify-content: center; color: var(--primary-color); font-size: 16px; margin-right: 12px;">
+                  <i class="fas fa-globe-americas"></i>
+                </div>
+                <div>
+                  <div style="font-weight: 500; margin-bottom: 2px;">World Traveler</div>
+                  <div style="font-size: 12px; color: var(--text-secondary);">Complete 5 travel conversation scenarios</div>
+                </div>
+              </div>
+              
+              <div style="display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 13px;">
+                <span>Progress: 3/5 completed</span>
+                <span style="color: var(--primary-color);">60%</span>
+              </div>
+              <div style="width: 100%; height: 8px; background-color: rgba(0,0,0,0.05); border-radius: 4px; margin-bottom: 12px;">
+                <div style="width: 60%; height: 100%; background-color: var(--primary-color); border-radius: 4px;"></div>
+              </div>
+              
+              <div style="display: flex; justify-content: space-between;">
+                <button style="background-color: var(--primary-color); color: white; border: none; border-radius: 18px; font-size: 13px; padding: 6px 12px;">
+                  Start Travel Scenario
+                </button>
+                <button style="background: none; border: none; color: var(--text-secondary); font-size: 13px;">
+                  View All Achievements
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Weekly Summary -->
+        <div class="card">
+          <h3 style="margin-bottom: 15px;">Weekly Summary</h3>
+          <div style="background-color: #f8f9fa; border-radius: 8px; padding: 12px; margin-bottom: 15px;">
+            <p style="margin: 0 0 8px 0; font-size: 14px;">
+              <i class="fas fa-chart-line" style="color: var(--success-color); margin-right: 5px;"></i>
+              <strong>Great progress this week!</strong> Your speaking fluency has improved by 8% and you've added 25 new vocabulary words.
+            </p>
+            <p style="margin: 0 0 8px 0; font-size: 14px;">
+              <i class="fas fa-lightbulb" style="color: var(--accent-color); margin-right: 5px;"></i>
+              <strong>Focus area:</strong> Continue practicing past tense usage in conversations.
+            </p>
+            <p style="margin: 0; font-size: 14px;">
+              <i class="fas fa-trophy" style="color: var(--primary-color); margin-right: 5px;"></i>
+              <strong>Goal for next week:</strong> Complete the "Travel Conversations" scenario series.
+            </p>
+          </div>
+          
+          <!-- Personalized Learning Path (NEW) -->
+          <div style="border: 1px dashed var(--primary-color); border-radius: 8px; padding: 12px; background-color: rgba(74, 111, 234, 0.05);">
+            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+              <div style="width: 40px; height: 40px; border-radius: 50%; background-color: var(--primary-color); display: flex; align-items: center; justify-content: center; color: white; font-size: 16px; margin-right: 12px;">
+                <i class="fas fa-route"></i>
+              </div>
+              <div>
+                <div style="font-weight: 500; margin-bottom: 2px;">AI-Tailored Learning Path</div>
+                <div style="font-size: 12px; color: var(--text-secondary);">Based on your performance and goals</div>
+              </div>
+            </div>
+            
+            <div style="margin-bottom: 12px;">
+              <div style="font-size: 14px; font-weight: 500; margin-bottom: 6px;">Recommended Next Steps:</div>
+              <ol style="margin: 0; padding-left: 25px; font-size: 13px; color: var(--text-primary);">
+                <li style="margin-bottom: 6px;">
+                  <strong>Business Negotiation</strong> - Intermediate practice to improve your business vocabulary
+                </li>
+                <li style="margin-bottom: 6px;">
+                  <strong>Past Tense Challenge</strong> - Focus exercise to address your grammar needs
+                </li>
+                <li>
+                  <strong>Airport Conversations</strong> - Help unlock your "World Traveler" achievement
+                </li>
+              </ol>
+            </div>
+            
+            <div style="text-align: center;">
+              <button class="button button-primary" style="width: 100%;">
+                Follow Recommended Path
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- iOS Tab Bar -->
+      <div class="tab-bar">
+        <div class="tab-item">
+          <i class="tab-icon fas fa-home"></i>
+          <span class="tab-label">Home</span>
+        </div>
+        <div class="tab-item">
+          <i class="tab-icon fas fa-comment-alt"></i>
+          <span class="tab-label">Chat</span>
+        </div>
+        <div class="tab-item">
+          <i class="tab-icon fas fa-graduation-cap"></i>
+          <span class="tab-label">Practice</span>
+        </div>
+        <div class="tab-item active">
+          <i class="tab-icon fas fa-chart-line"></i>
+          <span class="tab-label">Progress</span>
+        </div>
+        <div class="tab-item">
+          <i class="tab-icon fas fa-user"></i>
+          <span class="tab-label">Profile</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DialogueGenie - Language Learning App</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: var(--font-family);
+      background-color: #f5f7fa;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .project-header {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    
+    .project-title {
+      font-size: 36px;
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+    
+    .project-description {
+      max-width: 800px;
+      margin: 0 auto 20px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    
+    .iframe-description {
+      color: var(--text-secondary);
+      font-size: 14px;
+      margin-top: 10px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <header class="project-header">
+    <h1 class="project-title">DialogueGenie</h1>
+    <p class="project-description">
+      An AI-based conversational English speaking practice application emphasizing personalized learning, 
+      immersive experience, and instant feedback for language learners.
+    </p>
+  </header>
+  
+  <div class="iframe-grid">
+    <!-- Home Page -->
+    <div class="iframe-container">
+      <h2 class="iframe-title">Home Screen</h2>
+      <div class="iframe-wrapper">
+        <iframe src="home.html" title="Home Screen"></iframe>
+      </div>
+      <p class="iframe-description">
+        Main dashboard displaying daily practices, recommended lessons and personalized content.
+      </p>
+    </div>
+    
+    <!-- Chat Page -->
+    <div class="iframe-container">
+      <h2 class="iframe-title">Chat Interface</h2>
+      <div class="iframe-wrapper">
+        <iframe src="chat.html" title="Chat Interface"></iframe>
+      </div>
+      <p class="iframe-description">
+        Conversational interface for free-form practice with the AI language assistant.
+      </p>
+    </div>
+    
+    <!-- Practice Page -->
+    <div class="iframe-container">
+      <h2 class="iframe-title">Practice Session</h2>
+      <div class="iframe-wrapper">
+        <iframe src="practice.html" title="Practice Session"></iframe>
+      </div>
+      <p class="iframe-description">
+        Structured practice sessions with specific language learning objectives and guided exercises.
+      </p>
+    </div>
+    
+    <!-- Profile Page -->
+    <div class="iframe-container">
+      <h2 class="iframe-title">User Profile</h2>
+      <div class="iframe-wrapper">
+        <iframe src="profile.html" title="User Profile"></iframe>
+      </div>
+      <p class="iframe-description">
+        User profile information, achievements, and personalization options.
+      </p>
+    </div>
+    
+    <!-- Progress Page -->
+    <div class="iframe-container">
+      <h2 class="iframe-title">Progress Tracking</h2>
+      <div class="iframe-wrapper">
+        <iframe src="progress.html" title="Progress Tracking"></iframe>
+      </div>
+      <p class="iframe-description">
+        Visualized progress tracking showing improvement over time and achievements.
+      </p>
+    </div>
+    
+    <!-- Settings Page -->
+    <div class="iframe-container">
+      <h2 class="iframe-title">Settings</h2>
+      <div class="iframe-wrapper">
+        <iframe src="settings.html" title="Settings"></iframe>
+      </div>
+      <p class="iframe-description">
+        Application settings, preferences, and account management options.
+      </p>
+    </div>
+  </div>
+  
+  <footer class="project-header" style="margin-top: 40px;">
+    <p>DialogueGenie Prototype - High-Fidelity Implementation</p>
+    <p style="font-size: 14px; color: var(--text-secondary);">
+      Built with HTML5, CSS3, and JavaScript
+    </p>
+  </footer>
+</body>
+</html> 

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DialogueGenie - Chat</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="screen">
+      <!-- iOS Status Bar -->
+      <div class="status-bar">
+        <span class="status-bar-time">9:41</span>
+        <div class="status-bar-icons">
+          <i class="fas fa-signal"></i>
+          <i class="fas fa-wifi"></i>
+          <i class="fas fa-battery-full"></i>
+        </div>
+      </div>
+
+      <!-- Chat Header - Updated with Scenario Selector and Character Display -->
+      <div style="padding: var(--spacing-md); display: flex; align-items: center; border-bottom: 1px solid rgba(0,0,0,0.1);">
+        <div style="flex: 1; display: flex; align-items: center;">
+          <div style="width: 40px; height: 40px; border-radius: 50%; overflow: hidden; background-color: #e7f0ff; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Business Coach" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div>
+            <h3 style="margin-bottom: 0; font-size: 16px;">Business Coach</h3>
+            <div style="font-size: 12px; color: var(--text-secondary); display: flex; align-items: center;">
+              <i class="fas fa-circle" style="font-size: 8px; color: var(--success-color); margin-right: 4px;"></i> 
+              <div class="scenario-selector" style="display: flex; align-items: center; cursor: pointer;">
+                <span>Business Meeting</span>
+                <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 4px;"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button style="background: none; border: none; color: var(--primary-color);">
+            <i class="fas fa-ellipsis-v"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Scenario Context Banner (NEW) -->
+      <div style="background-color: rgba(74, 111, 234, 0.1); padding: 10px 16px; font-size: 13px; color: var(--text-primary); line-height: 1.4; display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <span style="font-weight: 600;">Context:</span> You're discussing a new marketing strategy for a product launch.
+        </div>
+        <button style="background: none; border: none; color: var(--primary-color); font-size: 16px;">
+          <i class="fas fa-info-circle"></i>
+        </button>
+      </div>
+
+      <!-- Difficulty Level Indicator (NEW) -->
+      <div style="padding: 8px 16px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; font-size: 12px; color: var(--text-secondary);">
+        <div>
+          <span>Difficulty: </span>
+          <span class="badge" style="background-color: #e7f0ff; color: var(--primary-color);">Intermediate</span>
+        </div>
+        <div>
+          <span>Focus: </span>
+          <span class="badge" style="background-color: #fff0f0; color: var(--accent-color);">Business Vocabulary</span>
+        </div>
+      </div>
+
+      <!-- Chat Container -->
+      <div class="chat-container">
+        <!-- Welcome Message -->
+        <div style="text-align: center; margin: 20px 0; color: var(--text-secondary); font-size: 12px;">
+          Today, 9:41 AM
+        </div>
+
+        <!-- AI Welcome Message -->
+        <div class="chat-bubble chat-bubble-ai">
+          <div style="margin-bottom: 5px; font-size: 11px; color: var(--text-secondary);">
+            <i class="fas fa-user-tie"></i> Business Coach
+          </div>
+          👋 Hello! I'm your business dialogue coach. Today we'll be practicing common phrases used in marketing strategy meetings. Let's start with discussing your ideas for the new product launch.
+        </div>
+
+        <!-- Suggested Topics -->
+        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin: 15px 0;">
+          <button style="background-color: #f0f4ff; border: none; border-radius: 18px; padding: 8px 16px; font-size: 13px; color: var(--primary-color);">
+            <i class="fas fa-chart-line"></i> Discuss Analytics
+          </button>
+          <button style="background-color: #f0f4ff; border: none; border-radius: 18px; padding: 8px 16px; font-size: 13px; color: var(--primary-color);">
+            <i class="fas fa-users"></i> Target Audience
+          </button>
+          <button style="background-color: #f0f4ff; border: none; border-radius: 18px; padding: 8px 16px; font-size: 13px; color: var(--primary-color);">
+            <i class="fas fa-bullhorn"></i> Promotion Strategy
+          </button>
+        </div>
+
+        <!-- User Message -->
+        <div class="chat-bubble chat-bubble-user">
+          I believe we should focus on social media marketing for this product launch. We could create engaging content that highlights the key features and benefits of our product.
+        </div>
+
+        <!-- Emotion Indicator (NEW) -->
+        <div style="display: flex; justify-content: flex-end; margin: -5px 0 10px; font-size: 12px; color: var(--text-secondary);">
+          <div style="padding: 2px 8px; background-color: rgba(74, 111, 234, 0.1); border-radius: 10px; color: var(--primary-color);">
+            <i class="fas fa-lightbulb"></i> Thoughtful
+          </div>
+        </div>
+
+        <!-- AI Response -->
+        <div class="chat-bubble chat-bubble-ai">
+          <div style="margin-bottom: 5px; font-size: 11px; color: var(--text-secondary);">
+            <i class="fas fa-user-tie"></i> Business Coach
+          </div>
+          That's a good starting point! Social media can indeed be very effective. Could you elaborate on which platforms you think would be most suitable for our target demographic and what type of content you envision?
+        </div>
+        
+        <!-- Emotion Indicator (NEW) -->
+        <div style="display: flex; justify-content: flex-start; margin: -5px 0 10px; font-size: 12px; color: var(--text-secondary);">
+          <div style="padding: 2px 8px; background-color: rgba(40, 167, 69, 0.1); border-radius: 10px; color: var(--success-color);">
+            <i class="fas fa-smile"></i> Encouraging
+          </div>
+        </div>
+
+        <!-- User Message -->
+        <div class="chat-bubble chat-bubble-user">
+          I think we should focus on Instagram and TikTok since our product appeals to a younger demographic. We can create short videos demonstrating the product in action and partner with influencers who align with our brand values.
+        </div>
+
+        <!-- Real-time Feedback (NEW) -->
+        <div style="background-color: rgba(40, 167, 69, 0.1); border-radius: 12px; padding: 12px; margin: 10px 0; border-left: 3px solid var(--success-color);">
+          <h4 style="margin-bottom: 8px; font-size: 14px; color: var(--success-color); display: flex; justify-content: space-between;">
+            <span><i class="fas fa-check-circle"></i> Language Feedback</span>
+            <span style="font-size: 12px; font-weight: normal; color: var(--text-secondary);">Score: 92/100</span>
+          </h4>
+          <div style="font-size: 13px; margin-bottom: 8px;">
+            <span style="color: var(--success-color); font-weight: 600;">Strengths:</span> Excellent use of business vocabulary with terms like "demographic" and "brand values". Clear structure.
+          </div>
+          <div style="font-size: 13px; margin-bottom: 0;">
+            <span style="color: var(--accent-color); font-weight: 600;">Suggestion:</span> Consider using more specific marketing terminology like "engagement rate" or "conversion" to enhance your professional vocabulary.
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-top: 10px; border-top: 1px solid rgba(40, 167, 69, 0.2); padding-top: 8px; font-size: 12px;">
+            <div>
+              <i class="fas fa-star" style="color: #FFD700;"></i>
+              <span style="color: var(--success-color);">Grammar: 95%</span>
+            </div>
+            <div>
+              <i class="fas fa-volume-up" style="color: var(--accent-color);"></i>
+              <span style="color: var(--accent-color);">Pronunciation: 88%</span>
+            </div>
+            <div>
+              <i class="fas fa-comments" style="color: var(--primary-color);"></i>
+              <span style="color: var(--primary-color);">Fluency: 94%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI Next Response -->
+        <div class="chat-bubble chat-bubble-ai">
+          <div style="margin-bottom: 5px; font-size: 11px; color: var(--text-secondary);">
+            <i class="fas fa-user-tie"></i> Business Coach
+          </div>
+          That's an excellent strategy! Instagram and TikTok are indeed well-suited for visual products targeting younger audiences. Let's develop this further - how would you measure the success of these campaigns? What key performance indicators would you track?
+        </div>
+      </div>
+
+      <!-- Chat Input Container with Enhanced Features -->
+      <div class="chat-input-container">
+        <div style="display: flex; width: 100%; padding: 5px 0;">
+          <button style="background: none; border: none; color: var(--text-secondary); padding: 0 8px;">
+            <i class="fas fa-paperclip"></i>
+          </button>
+          <form id="chat-form" style="flex: 1; display: flex;">
+            <input type="text" id="chat-input" class="chat-input" placeholder="Type your message...">
+            <button type="submit" style="background: var(--primary-color); border: none; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <i class="fas fa-paper-plane" style="color: white;"></i>
+            </button>
+          </form>
+          <button style="background: none; border: none; color: var(--text-secondary); padding: 0 8px; position: relative;">
+            <i class="fas fa-microphone"></i>
+            <!-- Voice Mode Active Indicator -->
+            <div style="position: absolute; width: 10px; height: 10px; background-color: var(--success-color); border-radius: 50%; top: 0; right: 3px;"></div>
+          </button>
+        </div>
+        
+        <!-- Enhanced Input Controls (NEW) -->
+        <div style="display: flex; justify-content: space-between; padding: 5px 10px; background-color: #f8f9fa; border-top: 1px solid #eee; font-size: 11px;">
+          <div style="display: flex; align-items: center;">
+            <span style="color: var(--text-secondary); margin-right: 5px;">Tone:</span>
+            <select style="border: none; background: transparent; color: var(--primary-color); font-size: 11px; padding: 2px;">
+              <option>Professional</option>
+              <option>Casual</option>
+              <option>Formal</option>
+              <option>Friendly</option>
+            </select>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <div style="color: var(--text-secondary);">
+              <i class="fas fa-volume-up" style="margin-right: 3px;"></i>
+              <span>Pronunciation Mode</span>
+            </div>
+            <div style="color: var(--primary-color);">
+              <i class="fas fa-magic" style="margin-right: 3px;"></i>
+              <span>Suggestions</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- iOS Tab Bar -->
+      <div class="tab-bar">
+        <div class="tab-item">
+          <i class="tab-icon fas fa-home"></i>
+          <span class="tab-label">Home</span>
+        </div>
+        <div class="tab-item active">
+          <i class="tab-icon fas fa-comment-alt"></i>
+          <span class="tab-label">Chat</span>
+        </div>
+        <div class="tab-item">
+          <i class="tab-icon fas fa-graduation-cap"></i>
+          <span class="tab-label">Practice</span>
+        </div>
+        <div class="tab-item">
+          <i class="tab-icon fas fa-chart-line"></i>
+          <span class="tab-label">Progress</span>
+        </div>
+        <div class="tab-item">
+          <i class="tab-icon fas fa-user"></i>
+          <span class="tab-label">Profile</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html> 
